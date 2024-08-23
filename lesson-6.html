@@ -1,0 +1,109 @@
+booleans and if-statements 
+<!doctype html>
+<html>
+  <head>
+    <title>Rock paper scissors</title>
+  </head>
+  <body>
+    <P>
+      Rock Paper Scissors
+    </P>
+    <button onclick="
+    const randomNumber=Math.random();
+    let computerMove='';
+    if(randomNumber>=0&&randomNumber<1/3){ computerMove='Rock';
+    }
+     else if(randomNumber>=1/3&&randomNumber<2/3){computerMove='Paper';}
+     else{ computerMove='Scissors';}
+
+     console.log  (computerMove);
+      let result='';
+      
+     if(computerMove==='Rock'){result='Tie';}
+     else if(computerMove==='Paper'){result='You lose'}
+     else if(computerMove==='Scissors'){result='You win'}
+
+     alert(`You picked rock. Computer picked ${computerMove}. ${result}`)
+    ">Rock</button>
+    <button onclick="
+    const randomNumber=Math.random();
+    let computerMove='';
+   
+    if(randomNumber>=0&&randomNumber<1/3){computerMove='rock'}
+    else if(randomNumber>=1/3&&randomNumber<2/3){computerMove='paper'}
+    else{computerMove='scissors'}
+    console.log(computerMove);
+    let result='';
+    if(computerMove==='rock'){result='You win'}
+    else if(computerMove==='paper'){
+      result='Tie'
+    }
+    else{result='You lose'}
+    alert(`You picked paper. Computer picked ${computerMove}.${result}`);
+    
+    
+    ">Paper</button>
+    <button onclick="
+    const randomNumber=Math.random();
+    let computerMove='';
+    if(randomNumber>=0&&randomNumber<1/3){computerMove='rock'}
+    else if(randomNumber>=1/3&&randomNumber<2/3){computerMove='paper'}
+    else{computerMove='scissors'}
+    console.log(computerMove);
+    let result='';
+    if(computerMove==='rock'){result='You lose'}
+    else if(computerMove==='paper'){result='You win'}
+    else{result='Tie'}
+    alert(`You picked scissors. Computer picked ${computerMove}. ${result}`);
+    
+    ">Scissors</button>
+    <p><a href="https://supersimple.dev/projects/rock-paper-scissors/" target="_blank">Click here</a> to see the final version of the project.</p>
+    <script>
+      /*//First u need to arrange the steps to get the result
+       //there are only two boolean values that exist and they are:
+      //true and false
+
+      console.log(3>5);
+      //syntax rules for booleans
+      //1. You don't start a boolean with quotes.
+      //in javascript, the comparison operators are as follows:
+      //> greater than
+      //<less than
+      //>=greater than or equal to
+      //<=less than or equal to
+      //===equal to
+      //!==not equal to
+      //== is also equal to but the difference between the two is that == changes both of them into the same form i.e console.log(5=='5.00'); displays true despite one is a number and the other is a string
+      //The falsy values are false 0 '' NaN undefined and null
+      const age= 15; 
+      if(false){console.log('hello');}
+      else{
+        console.log('else');
+      }//displays else in console
+      if(age >=16){console.log('You can drive.');
+      console.log('Congrats.');
+      }
+      else if(age>=14){console.log('Almost there!');}
+      else{console.log('You cannot drive.');}//displays You can drive in console
+      //shortcuts for if-statements 
+      //Ternary operator ?:
+      //Guard operator &&
+      //default operator ||
+
+       true ? 'truthy':'falsy'
+      //instead of
+      if(true){'truthy'}
+      else {'falsy'}
+      //you can go ahead and save a ternary operator as a variable
+      const result= true ? 'truthy':'falsy';
+      console.log(result);
+
+     true&&console.log('hello');
+     const message=5&&'hello'
+     console.log(message);
+
+     const currency=undefined||'USD';
+     console.log(currency);*/
+    </script>
+  </body>
+</html>

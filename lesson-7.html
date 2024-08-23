@@ -1,0 +1,127 @@
+Functions
+<!doctype html>
+<html>
+  <head>
+    <title>Rock paper scissors</title>
+  </head>
+  <body>
+    <P>
+      Rock Paper Scissors
+    </P>
+    <button onclick="
+     playGame('rock');
+    ">Rock</button>
+    <button onclick="
+   playGame('paper');
+    ">Paper</button>
+    <button onclick="
+     playGame('scissors');
+    ">Scissors</button>
+    <p><a href="https://supersimple.dev/projects/rock-paper-scissors/" target="_blank">Click here</a> to see the final version of the project.</p>
+    <script>
+      function playGame(playerMove){
+        const computerMove=pickComputerMove();
+
+      let result='';
+
+      if(playerMove==='scissors'){
+        if(computerMove==='rock'){result='You lose'}
+      else if(computerMove==='paper'){result='You win'}
+      else{result='Tie'}
+      
+      }
+
+     else if(playerMove==='paper'){
+      if(computerMove==='rock'){result='You win'}
+    else if(computerMove==='paper'){
+      result='Tie'
+    }
+    else{result='You lose'}
+     }
+
+     else{if(computerMove==='rock'){result='Tie';}
+     else if(computerMove==='paper'){result='You lose'}
+     else{result='You win'}}
+      alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}`);
+    }
+
+
+      function pickComputerMove(){
+        const randomNumber=Math.random();
+        
+        let computerMove='';
+
+        if(randomNumber>=0&&randomNumber<1/3){computerMove='rock'}
+        else if(randomNumber>=1/3&&randomNumber<2/3){computerMove='paper'}
+        else{computerMove='scissors'}
+       return computerMove;
+      }
+      /*//Cause of the rule of scope, computerMove does not work outside this curly brackets so we put the function ina variable
+      //return helps us get a value from the function when it is called. When consoled it in scissors.
+
+      //First u need to arrange the steps to get the result
+       //there are only two boolean values that exist and they are:
+      //true and false
+
+      console.log(3>5);
+      //syntax rules for booleans
+      //1. You don't start a boolean with quotes.
+      //in javascript, the comparison operators are as follows:
+      //> greater than
+      //<less than
+      //>=greater than or equal to
+      //<=less than or equal to
+      //===equal to
+      //!==not equal to
+      //== is also equal to but the difference between the two is that == changes both of them into the same form i.e console.log(5=='5.00'); displays true despite one is a number and the other is a string
+      //The falsy values are false 0 '' NaN undefined and null
+      const age= 15; 
+      if(false){console.log('hello');}
+      else{
+        console.log('else');
+      }//displays else in console
+      if(age >=16){console.log('You can drive.');
+      console.log('Congrats.');
+      }
+      else if(age>=14){console.log('Almost there!');}
+      else{console.log('You cannot drive.');}//displays You can drive in console
+      //shortcuts for if-statements 
+      //Ternary operator ?:
+      //Guard operator &&
+      //default operator ||
+
+       true ? 'truthy':'falsy'
+      //instead of
+      if(true){'truthy'}
+      else {'falsy'}
+      //you can go ahead and save a ternary operator as a variable
+      const result= true ? 'truthy':'falsy';
+      console.log(result);
+
+     true&&console.log('hello');
+     const message=5&&'hello'
+     console.log(message);
+
+     const currency=undefined||'USD';
+     console.log(currency);*/
+
+     /* function function1(){
+        console.log('hello');
+        console.log(2+2);
+      }
+      function1();
+      function1();//This is known as calling the function
+      //rules for function names
+      //Can't use special words e.g function
+      //Can't statr with a number
+      //can't use special characters except: $_
+      //Parameters 
+      //the syntax rules are the same as functions
+      function calculateTax(cost,taxPercent=0.1){
+        console.log(cost*taxPercent);
+      }
+      calculateTax(2000,0.2);
+      calculateTax(5000);//The value inside is known as argument*/
+    </script>
+  </body>
+</html>

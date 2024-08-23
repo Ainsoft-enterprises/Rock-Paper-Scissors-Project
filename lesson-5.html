@@ -1,0 +1,94 @@
+Variables
+
+<!doctype html>
+<html>
+  <head>
+    <title>
+      Variables
+    </title>
+  </head>
+  <body>
+    <p>Cart Quantity</p>
+    <button onclick="
+    cartQuantity=cartQuantity;
+    console.log(`Cart quantity: ${cartQuantity}`);
+    ">Show quantity</button>
+    <button onclick="
+    if(cartQuantity+1>10){alert(' Maximum Number of items');}
+    else{cartQuantity++;
+    console.log(`Cart quantity: ${cartQuantity}`);}
+    
+    ">Add to Cart</button>
+    <button onclick="
+    if(cartQuantity+2>10){alert('Maximum number of items');}
+    else{cartQuantity+=2;
+    console.log(`Cart quantity: ${cartQuantity}`);}
+    
+    ">+2</button>
+    <button onclick="
+    if (cartQuantity+3>10){alert('Maximum number of items');}
+    else{cartQuantity+=3;
+    console.log(`Cart quantity: ${cartQuantity}`);}
+    
+    ">+3</button>
+    <button onclick="
+    cartQuantity=0;
+    console.log(`Cart was reset.`);
+    console.log(`Cart quantity: ${cartQuantity}`);
+    ">Reset Cart</button>
+    <button onclick="
+    if(cartQuantity-1<0){alert('Not enough items in the cart');}
+    else{cartQuantity-=1;
+    console.log(`Cart quantity: ${cartQuantity}`);}
+    
+    ">Remove from Cart</button>
+    <button onclick="
+    if(cartQuantity-2<0){alert('Not enough items in the cart!');}
+    else{cartQuantity-=2;
+    console.log(`Cart quantity: ${cartQuantity}`);}
+    
+    ">-2</button>
+    <button onclick="
+    if(cartQuantity-3<0){alert('Not enough items in the cart!');}
+    else{cartQuantity-=3;
+    console.log(`Cart quantity: ${cartQuantity}`)}
+    ">-3</button>
+    
+    
+    <script>
+      /*let cartQuantity=0;
+      let variable1 = 3;
+      console.log(variable1);//
+      The console displays 3
+    
+      let calculation = 2+2;
+      console.log(calculation);
+      console.log(calculation+2);//displays 6
+      let result=calculation+2;
+      console.log(result);//displays 6
+    
+      let message='hello';
+      console.log(message); 
+      //Syntax rules for variables 
+      //1. Cant use special words like let 
+      //2. Can't start with a number 
+      //3.Can't use special characters apart from dollar and underscore
+      
+      variable1=5;
+      console.log(variable1);
+      //When re-assigning a value to a variable, let should not be used before the variable name.
+    
+      variable1=variable1+1;
+      console.log(variable1);
+    
+      const variable2=3;//This variable can't be re-assigned cause of the const.
+      console.log(variable2);
+    
+      var variable3=3//var is the original way of naming a variable in javascript
+      //Therefore the three ways of creating variables are
+      //1.let
+      //2. const
+      //3. var*/
+    </script>
+  </body>
+</html>
